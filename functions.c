@@ -48,7 +48,7 @@ void turn_right(int degrees, int speed)
 	while(get_create_total_angle() < degrees)
 	{
 		create_drive_direct(speed, -speed);
-		msleep();
+		msleep(10);
 	}
 	create_stop();
 }
@@ -59,7 +59,7 @@ void turn_left(int degrees, int speed)
 	while(get_create_total_angle() < degrees)
 	{
 		create_drive_direct(-speed, speed);
-		msleep();
+		msleep(10);
 	}
 	create_stop();
 }
