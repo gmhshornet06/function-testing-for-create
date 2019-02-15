@@ -1,9 +1,9 @@
 #include <kipr/botball.h>
 
-void drive_forward;
-void drive_backward;
-void turn_right;
-void turn_left;
+void drive_forward(int ticks, int speed);
+void drive_backward(int ticks, int speed);
+void turn_right(int degrees, int speed);
+void turn_left(int degrees, int speed);
 void arm_up;
 void arm_down;
 void claw_open;
