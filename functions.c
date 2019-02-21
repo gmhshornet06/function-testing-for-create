@@ -1,27 +1,27 @@
 #include <kipr/botball.h>
 
-void drive_forward(int ticks, int speed);
-void drive_backward(int ticks, int speed);
-void turn_right(int degrees, int speed);
-void turn_left(int degrees, int speed);
-void arm_up;
-void arm_down;
-void claw_open;
-void claw_close;
-void follow_line;
+void driveForward(int ticks, int speed);
+void driveBackward(int ticks, int speed);
+void turnRight(int degrees, int speed);
+void turnLeft(int degrees, int speed);
+void armUp;
+void armDown;
+void clawOpen;
+void clawClose;
+void followLine;
 
 int main()
 {
 	create_connect();
-	drive_forward(1000, 250);
-	drive_backward(1000, 250);
-	turn_right(90, 250);
-	turn_left(90, 250);
+	driveForward(1000, 250);
+	driveBackward(1000, 250);
+	turnRight(90, 250);
+	turnLeft(90, 250);
 	create_disconnect();
 	return 0;
 }
 
-void drive_forward(int ticks, int speed)
+void driveForward(int ticks, int speed)
 {
 	set_create_distance(0);
 	while(abs(get_create_distance()) < ticks)
@@ -32,7 +32,7 @@ void drive_forward(int ticks, int speed)
 	create_stop();
 }
 
-void drive_backward(int ticks, int speed)
+void driveBackward(int ticks, int speed)
 {
 	set_create_distance(0);
 	while(abs(get_create_distance()) < ticks)
@@ -43,7 +43,7 @@ void drive_backward(int ticks, int speed)
 	create_stop();
 }
 
-void turn_right(int degrees, int speed)
+void turnRight(int degrees, int speed)
 {
 	set_create_total_angle(0);
 	while(abs(get_create_total_angle()) < degrees)
@@ -54,7 +54,7 @@ void turn_right(int degrees, int speed)
 	create_stop();
 }
 
-void turn_left(int degrees, int speed)
+void turnLeft(int degrees, int speed)
 {
 	set_create_total_angle(0);
 	while(abs(get_create_total_angle()) < degrees)
