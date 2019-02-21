@@ -25,7 +25,7 @@ void driveForward(int ticks, int speed)
 {
 	set_create_distance(0);
 	while(abs(get_create_distance()) < ticks)
-    {
+	{
 		create_drive_direct(speed, speed);
 		msleep(10);
 	}
