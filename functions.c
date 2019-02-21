@@ -14,10 +14,6 @@ int main()
 {
 	create_connect();
 	driveForward(1000, 250);
-	driveBackward(1000, 250);
-	turnRight(90, 250);
-	turnLeft(90, 250);
-	create_disconnect();
 	return 0;
 }
 
